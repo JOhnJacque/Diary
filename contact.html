@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | My College Diary</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+.contact-container{
+    width: 90%;
+    max-width: 1000px;
+    margin: 140px auto;
+    background: rgba(255,255,255,0.12);
+    padding: 50px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.contact-container h1{
+    font-size: clamp(3rem, 5vw, 5rem);
+    margin-bottom: 20px;
+}
+
+.contact-container p{
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+/* FLEXIBLE CONTACT BOXES */
+
+.contact-icons{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.contact-box{
+    flex: 1 1 220px;
+    max-width: 260px;
+    min-width: 200px;
+    background: rgba(255,255,255,0.1);
+    padding: 30px 20px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.contact-box:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #eeeff0;
+}
+
+.contact-box i{
+    font-size: clamp(3rem, 5vw, 5rem);
+    color: #2589c7;
+    margin-bottom: 15px;
+}
+
+.contact-box h3{
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    margin-bottom: 10px;
+}
+
+.contact-box span{
+    display: block;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    color: white;
+    line-height: 1.6;
+    word-break: break-word;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .contact-container{
+        padding: 30px 20px;
+    }
+
+    .contact-icons{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-box{
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <a href="index.html" class="logo">
+        My College Diary
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="diary.html">Diary</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+
+</header>
+
+<div class="contact-container">
+
+    <h1>
+        Contact <span>Me</span>
+    </h1>
+
+    <p>
+        You can contact me through these social media platforms
+        and communication channels.
+    </p>
+
+    <div class="contact-icons">
+
+        <div class="contact-box">
+
+            <i class="fa-brands fa-facebook"></i>
+
+            <h3>Facebook</h3>
+
+            <span>
+                 Michael Angelo Verenio 
+            </span>
+
+        </div>
+
+        <div class="contact-box">
+
+    <i class="fa-solid fa-phone"></i>
+
+    <h3>Contact Number</h3>
+
+    <span>
+        +63 91 476 5681
+    </span>
+
+</div>
+
+        <div class="contact-box">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <h3>Email</h3>
+
+            <span>
+                vereniojohnmichael@gmail.com
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

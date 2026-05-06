@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me | My College Diary</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+    /* CERTIFICATE POPUP */
+/* CERTIFICATE CAROUSEL */
+
+.certificate-carousel{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.certificate-track{
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%;
+    padding: 10px;
+}
+
+.certificate-track::-webkit-scrollbar{
+    display: none;
+}
+
+.certificate-card{
+    min-width: 250px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.certificate-card img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 4px solid #87cefa;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.certificate-card img:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 20px #87cefa;
+}
+
+.carousel-btn{
+    background: #87cefa;
+    color: #0b3d91;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.carousel-btn:hover{
+    background: white;
+}
+.certificate-popup{
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.certificate-popup img{
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 20px;
+    border: 5px solid #87cefa;
+    animation: zoomIn 0.3s ease;
+}
+
+.close-popup{
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    font-size: 5rem;
+    color: white;
+    cursor: pointer;
+}
+
+@keyframes zoomIn{
+
+    from{
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.about-container{
+    width: 90%;
+    max-width: 1100px;
+    margin: 120px auto 50px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 25px;
+    padding: 50px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.profile-section{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.profile-section img{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffd700;
+    box-shadow: 0 0 20px #ffd700;
+}
+
+.profile-card{
+    margin-top: 30px;
+    background: rgba(255,255,255,0.12);
+    padding: 40px;
+    border-radius: 20px;
+    line-height: 2.5;
+    font-size: 1.8rem;
+}
+
+.profile-card h1{
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.section-box{
+    margin-top: 40px;
+    background: rgba(255,255,255,0.12);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.section-box h2{
+    font-size: 3.2rem;
+    color: #ffd700;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ffd700;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.section-box p,
+.section-box li{
+    font-size: 1.7rem;
+    line-height: 2;
+}
+
+.skills-list{
+    margin-top: 20px;
+    list-style: none;
+}
+
+.skills-list li{
+    margin-bottom: 15px;
+}
+
+.skills-list i{
+    color: #00ff66;
+    margin-right: 10px;
+}
+
+@media(max-width:768px){
+
+    .about-container{
+        padding: 25px;
+    }
+
+    .profile-card{
+        padding: 25px;
+    }
+
+    .section-box{
+        padding: 25px;
+    }
+
+    .profile-card h1{
+        font-size: 3rem;
+    }
+
+    .section-box h2{
+        font-size: 2.5rem;
+    }
+    
+}
+
+
+</style>
+<script>
+
+function scrollCertificates(direction){
+
+    const track = document.getElementById("certificateTrack");
+
+    const scrollAmount = 320;
+
+    track.scrollLeft += direction * scrollAmount;
+}
+
+function openCertificate(src){
+
+    document.getElementById("certificatePopup").style.display = "flex";
+
+    document.getElementById("popupCertificateImg").src = src;
+}
+
+function closeCertificate(){
+
+    document.getElementById("certificatePopup").style.display = "none";
+}
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="logo">My College Diary</a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="diary.html">Diary</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<div class="about-container">
+
+    <!-- PROFILE -->
+
+    <div class="profile-section">
+
+        <img src="1000029501_850278f36308d79be25a6d77fd822467-4_16_2026, 2_37_18 PM.jpg" alt="Profile Picture">
+
+        <div class="profile-card">
+
+            <h1>Hello! 👋</h1>
+
+            <p><b>Name:</b> John Micheal E. Verenio </p>
+
+            <p><b>Course:</b> Bachelor of Science in Information Technology (BSIT)</p>
+
+            <p><b>School:</b> Colegio de Sta. Teresa de Avila</p>
+
+            <p><b>Year Level:</b> 2nd Year College</p>
+
+            <p>
+                <b>Goal:</b> To become a successful IT professional
+                and build innovative technology solutions.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- ACADEMIC JOURNEY -->
+
+    <div class="section-box">
+
+        <h2>My Academic Journey</h2>
+
+        <p>
+            I am currently studying Information Technology where I am
+            learning programming, web development, databases, and system analysis.
+            My college journey continues to shape my technical skills
+            and professional growth.
+        </p>
+
+    </div>
+
+    <!-- SKILLS -->
+
+    <div class="section-box">
+
+        <h2>Skills</h2>
+
+        <ul class="skills-list">
+
+            <li><i class="fa-solid fa-check"></i> HTML & CSS</li>
+
+            <li><i class="fa-solid fa-check"></i> Basic Java</li>
+
+            <li><i class="fa-solid fa-check"></i> Programming Fundamentals</li>
+
+            <li><i class="fa-solid fa-check"></i> Database Basics</li>
+
+        </ul>
+
+    </div>
+   <!-- CERTIFICATES SECTION -->
+
+<div class="section-box">
+
+    <h2>Certificates</h2>
+
+    <div class="certificate-carousel">
+
+        <button class="carousel-btn left"
+        onclick="scrollCertificates(-1)">
+            &#10094;
+        </button>
+
+        <div class="certificate-track" id="certificateTrack">
+
+            <!-- CERTIFICATE 1 -->
+
+            <div class="certificate-card">
+
+                <img src="cert/IMG_20260506_183518_340.jpg"
+                alt="Certificate"
+                onclick="openCertificate(this.src)">
+
+            </div>
+
+            <!-- CERTIFICATE 2 -->
+
+            <div class="certificate-card">
+
+                <img src="cert/IMG_20260506_183530_169.jpg"
+                alt="Certificate"
+                onclick="openCertificate(this.src)">
+
+            </div>
+
+            <!-- CERTIFICATE 3 -->
+
+            <div class="certificate-card">
+
+                <img src="cert/IMG_20260506_183537_971.jpg"
+                alt="Certificate"
+                onclick="openCertificate(this.src)">
+
+            </div>
+
+            <!-- CERTIFICATE 4 -->
+
+            <div class="certificate-card">
+
+                <img src="cert/IMG_20260506_183547_501.jpg"
+                alt="Certificate"
+                onclick="openCertificate(this.src)">
+
+            </div>
+
+        </div>
+
+        <button class="carousel-btn right"
+        onclick="scrollCertificates(1)">
+            &#10095;
+        </button>
+
+    </div>
+
+</div>
+
+<!-- POPUP -->
+
+<div id="certificatePopup" class="certificate-popup">
+
+    <span class="close-popup"
+    onclick="closeCertificate()">
+        &times;
+    </span>
+
+    <img id="popupCertificateImg">
+
+</div>
+        </div>
+
+        <button class="carousel-btn right"
+        onclick="scrollCertificates(1)">
+            &#10095;
+        </button>
+
+    </div>
+
+</div>
+
+</div>
+
+</body>
+</html>

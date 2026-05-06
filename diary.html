@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diary | My College Diary</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.diary-container{
+    width: 90%;
+    max-width: 1000px;
+    margin: 120px auto 50px;
+}
+
+.diary-title{
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.diary-subtitle{
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+/* DIARY CARD */
+
+.diary-card{
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+}
+
+.diary-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #87cefa;
+}
+
+.diary-card h2{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.diary-card p{
+    font-size: 1.7rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* IMAGE */
+
+.diary-image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.diary-image img{
+    width: 70%;
+    max-width: 700px;
+    border-radius: 20px;
+    border: 5px solid #87cefa;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.diary-image img:hover{
+    transform: scale(1.02);
+    box-shadow: 0 0 25px #87cefa;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .diary-title{
+        font-size: 3rem;
+    }
+
+    .diary-card h2{
+        font-size: 2.3rem;
+    }
+
+    .diary-card p{
+        font-size: 1.5rem;
+    }
+
+    .diary-image img{
+        width: 100%;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <a href="index.html" class="logo">
+        My College Diary
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="diary.html" class="active">Diary</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+<div class="diary-container">
+
+    <h1 class="diary-title">
+        My College Journey 📝
+    </h1>
+
+    <p class="diary-subtitle">
+        From my first day in college to today,
+        here's a timeline of my experiences as an IT student.
+    </p>
+
+    <!-- FIRST ENTRY -->
+
+    <div class="diary-card">
+
+        <h2>🗓️ First Day of building our project</h2>
+
+        <p>
+          My first day working on our 2nd year project. Excited and nervous!
+Planning, brainstorming, and starting the project with the team.
+        </p>
+
+        <div class="diary-image">
+            <img src="cert/received_982705230860947.jpg" alt="">
+        </div>
+
+    </div>
+
+    <!-- SECOND ENTRY -->
+
+    <div class="diary-card">
+
+        <h2>💻 Finish product</h2>
+
+        <p>
+            We finished our first project for our exhibit.
+            It was difficult at first but fun to learn.
+        </p>
+
+        <div class="diary-image">
+            <img src="cert/received_851563827238093.jpg" alt="">
+        </div>
+
+    </div>
+
+    <!-- THIRD ENTRY -->
+
+    <div class="diary-card">
+
+        <h2>🎉 During Exhibit</h2>
+
+        <p>
+            Participated in the Advancing Smart Solutions Through IoT Technology.
+One of the most exciting and memorable moments of the semester.
+        </p>
+
+        <div class="diary-image">
+            <img src="cert/received_4566972440200000.jpg" alt="">
+        </div>
+
+        
+
+    </div>
+<div class="diary-card">
+
+        <h2>🎉 End of the Exhibit</h2>
+
+        <p>
+            
+One of the most exciting and memorable moments of the semester.
+        </p>
+
+        <div class="diary-image">
+            <img src="cert/received_1350678966908012.jpg" alt="">
+        </div>
+</div>
+
+</body>
+</html>
